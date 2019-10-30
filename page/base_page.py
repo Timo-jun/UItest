@@ -68,6 +68,12 @@ class Page(object):
     def move_to_element(self, loc):
         self.action.move_to_element(self.find_element(loc)).perform()
 
+    def scroll_into_view(self, loc):
+        try:
+            self.driver.execute_script("arguments[0].scrollIntoView({block:'center'});", self.driver.find_element(loc))
+        except Exception as e:
+            print(e)
+
 
 
 

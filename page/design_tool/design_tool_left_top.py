@@ -3,10 +3,10 @@ from selenium.webdriver.common.by import By
 
 
 class DesignToolLeftAndHeader(Page):
-    public_material = (By.XPATH, "(//li[@role='menuitem']//span)[1]")
-    person_buy = (By.XPATH, "(//li[@role='menuitem']//span)[2]")
-    design_space = (By.XPATH, "(//li[@role='menuitem']//span)[3]")
-    company_space = (By.XPATH, "(//li[@role='menuitem']//span)[4]")
+    public_material = (By.XPATH, "//li[@role='menuitem']//span[text()='公共素材库']")
+    person_buy = (By.XPATH, "//li[@role='menuitem']//span[text()='个人收藏/购买']")
+    design_space = (By.XPATH, "//li[@role='menuitem']//span[text()='设计空间']")
+    company_space = (By.XPATH, "//li[@role='menuitem']//span[text()='企业空间']")
     home_page = (By.XPATH, "//span[@class='navto'and text()='云丝尚首页']")
 
     def click_company_space(self):

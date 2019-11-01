@@ -17,5 +17,5 @@ class PatternSketchMaterial(PublicMaterialTop):
         self.scroll_into_view(self.search_input)
 
     def click_select_goods(self, text):
-        text = self.select_goods[0] + self.select_goods[1].replace('replace', text)
+        text = (self.select_goods[0], self.select_goods[1].replace('replace', text))
         self.click(text)

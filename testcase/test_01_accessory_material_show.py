@@ -1,13 +1,13 @@
-import sys
 import os
+import sys
+
 sys.path.append((os.path.abspath(os.path.join(os.path.dirname(__file__), '../'))))
 from selenium import webdriver
-from page.login_page import LoginPage
+from page.official_website.login_page import LoginPage
 from common.AutoLog import AutomationLog
 from operation.login_page_op import LoginPageOp
 import time
 import pytest
-import allure
 
 
 @pytest.fixture(scope='class')

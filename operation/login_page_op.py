@@ -3,16 +3,27 @@
 @Create: 2019/10/24
 @Purpose:登录页操作流程
 """
-from page.login_page import LoginPage
 import requests
 from bs4 import BeautifulSoup
+from page.management_system.login_page import LoginPage as a
+from page.official_website.login_page import  LoginPage as b
 
 
 class LoginPageOp:
 
     def __init__(self, page):
         self.lp = page
-        # self.lp = LoginPage(1)
+        # self.lp = a(1)
+
+    def management_login(self, username, password):
+        """
+        username: 账号
+        password: 密码
+        Usage: 运营管理系统登录
+        """
+        self.lp.type_username(username)
+        self.lp.type_password(password)
+        self.lp.click_login_button()
 
     # 登录流程
     def login_op(self, phone, password):

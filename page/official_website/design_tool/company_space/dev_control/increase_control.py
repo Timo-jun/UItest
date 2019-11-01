@@ -13,6 +13,6 @@ class IncreaseControl(Page):
     increase_task = (By.XPATH, "//button//span[text()='添加任务']")
 
     def click_brand_list(self, brand):
-        loc = self.brand_list[0] + self.brand_list[1].replace('replace', brand)
+        loc = (self.brand_list[0], self.brand_list[1].replace('replace', brand))
         self.click(loc)
 

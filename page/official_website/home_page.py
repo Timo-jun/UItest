@@ -1,8 +1,8 @@
-from page.base_page import Page
-from page.home_page_header import Header
-from selenium import webdriver
 from time import sleep
-from selenium.webdriver.common.action_chains import ActionChains
+
+from selenium import webdriver
+
+from page.official_website.home_page_header import Header
 
 
 class HomePage(Header):
@@ -12,7 +12,7 @@ class HomePage(Header):
 
 
 if __name__ == '__main__':
-    from page.login_page import LoginPage
+    from page.official_website.login_page import LoginPage
     from operation.login_page_op import LoginPageOp
     driver = webdriver.Chrome()
     driver.get('http://login.test.seeshion.com/accountCenter/login')

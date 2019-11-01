@@ -3,9 +3,8 @@
 @Create: 2019/10/24
 @Purpose:页面元素操作代码pro
 """
-from page.login_page import LoginPage
-from page.design_tool.design_tool_left_top import DesignToolLeftAndHeader
-a = dir(DesignToolLeftAndHeader)
+from page.management_system.manage_home_left import ManageHomeLeft
+a = dir(ManageHomeLeft)
 for i in a:
     end = i[-1]
     start = i[:-1]

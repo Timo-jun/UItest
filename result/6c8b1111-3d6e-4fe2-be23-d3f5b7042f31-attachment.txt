@@ -1,0 +1,2 @@
+2019-11-08 09:01:11,518 - INFO - 1 times search, ('css selector', '#kw') 
+2019-11-08 09:01:11,712 - INFO - 1 times search, ('css selector', '#su') 
